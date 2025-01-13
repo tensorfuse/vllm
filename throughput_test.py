@@ -6,9 +6,9 @@ import numpy as np
 from typing import Dict, List
 
 async def send_request(session: aiohttp.ClientSession, prompt: str, max_tokens: int = 100) -> Dict:
-    url = "http://a3bafe67e8f2a422ba99b5737992f756-614062644.us-east-1.elb.amazonaws.com/svc/default/vllm-gpus-1-a10g/v1/completions"
+    url = "<url>/svc/<env>/<service_name>/v1/completions"
     payload = {
-        "model": "google/gemma-2b",
+        "model": "<model/lora>",
         "prompt": prompt,
         "max_tokens": max_tokens,
         "temperature": 0.7
